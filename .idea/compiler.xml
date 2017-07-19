@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mybatis-mapper" />
+      </profile>
+    </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="mybatis-demo_main" target="1.8" />
       <module name="mybatis-demo_test" target="1.8" />
+      <module name="mybatis-mapper" target="1.5" />
+      <module name="mybatis-mapper_main" target="1.8" />
+      <module name="mybatis-mapper_test" target="1.8" />
       <module name="mybatis-one_main" target="1.8" />
       <module name="mybatis-one_test" target="1.8" />
       <module name="mybatis-xml_main" target="1.8" />

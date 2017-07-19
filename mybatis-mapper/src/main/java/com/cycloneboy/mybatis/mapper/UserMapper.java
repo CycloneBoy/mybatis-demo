@@ -1,7 +1,7 @@
-package com.cycloneboy.mapper;
+package com.cycloneboy.mybatis.mapper;
 
-import com.cycloneboy.entity.User;
-import org.apache.ibatis.annotations.Select;
+
+import com.cycloneboy.mybatis.entity.User;
 
 /**
  * Created by CycloneBoy on 2017/7/19.

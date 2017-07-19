@@ -66,4 +66,25 @@ public class UserTest {
         }
     }
 
+    @org.junit.Test
+    public void test4(){
+        SqlSession sqlSession = null;
+        try {
+            sqlSession = DBUtils.openSqlSession();
+            UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+            User user =userMapper.getUser(4L);
+            user.setAddress("北京");
+            user.setPassword("123456");
+            userMapper.updateUser(user);
+            user =userMapper.getUser(4L);
+            System.out.println("test4: 更新一条记录  " + user);
+        } catch (Exception e){
+            e.printStackTrace();
+            sqlSession.rollback();
+        } finally {
+            if(sqlSession != null){
+                sqlSession.close();
+            }
+        }
+    }
 }

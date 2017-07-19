@@ -19,25 +19,49 @@
     <schema id="13" parent="1" name="sys"/>
     <schema id="14" parent="1" name="test"/>
     <table id="15" parent="2" name="user"/>
-    <column id="16" parent="15" name="id">
+    <table id="16" parent="2" name="user2"/>
+    <column id="17" parent="15" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="17" parent="15" name="username">
+    <column id="18" parent="15" name="username">
       <Position>2</Position>
       <DataType>varchar(32)|0</DataType>
     </column>
-    <column id="18" parent="15" name="password">
+    <column id="19" parent="15" name="password">
       <Position>3</Position>
       <DataType>varchar(64)|0</DataType>
     </column>
-    <column id="19" parent="15" name="address">
+    <column id="20" parent="15" name="address">
       <Position>4</Position>
       <DataType>varchar(64)|0</DataType>
     </column>
-    <key id="20" parent="15" name="PRIMARY">
+    <key id="21" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="22" parent="16" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="23" parent="16" name="user_name">
+      <Position>2</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="24" parent="16" name="password">
+      <Position>3</Position>
+      <DataType>varchar(64)|0</DataType>
+    </column>
+    <column id="25" parent="16" name="address">
+      <Position>4</Position>
+      <DataType>varchar(64)|0</DataType>
+    </column>
+    <key id="26" parent="16" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis-demo.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis-mapper.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis-mapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis-mapper_main.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis-mapper_main.iml" group="mybatis-mapper" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis-mapper_test.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis-mapper_test.iml" group="mybatis-mapper" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis-one.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis-one.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis-one_main.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis-one_main.iml" group="mybatis-one" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis-one_test.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis-one_test.iml" group="mybatis-one" />

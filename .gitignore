@@ -1,0 +1,12 @@
+# Created by .ignore support plugin (hsz.mobi)
+.gitignore
+.gradle/
+.idea/dataSources.local.xml
+.idea/inspectionProfiles/
+.idea/modules/mybatis/
+.idea/workspace.xml
+mybatis-one/.gradle/
+mybatis-one/build/
+mybatis-one/src/main/java/com/cycloneboy/config/
+mybatis-xml/.gradle/
+mybatis-xml/build/
