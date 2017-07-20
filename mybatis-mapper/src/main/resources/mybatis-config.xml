@@ -4,6 +4,9 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <properties resource="db.properties" />
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
     <typeAliases >
         <package name="com.cycloneboy.mybatis.entity" />
     </typeAliases>
@@ -19,6 +22,6 @@
         </environment>
     </environments>
     <mappers>
-        <package name="com.cycloneboy.mybatis.mapper"/>
+       <mapper resource="userNewMapper.xml"/>
     </mappers>
 </configuration>

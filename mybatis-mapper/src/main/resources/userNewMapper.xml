@@ -9,42 +9,46 @@
         <result property="password" column="password" javaType="string" jdbcType="VARCHAR"/>
         <result property="address" column="address" javaType="string" jdbcType="VARCHAR"/>
     </resultMap>
-    <select id="getUser" resultType="userNewMap" parameterType="Long">
-        select * from user2 where id =#{id}
-    </select>
-    <select id="getUserByAddressAndName" resultMap="userNewMap">
-        select * FROM user2 where address=#{address} and user_name LIKE  concat(#{username},'%')
-    </select>
-    <select id="getUserByAddressAndName2" resultMap="userNewMap"
-            parameterType="com.cycloneboy.mybatis.entity.UserParams">
-        select * FROM user2 where address=#{address} and user_name LIKE  concat(#{username},'%')
-    </select>
-
-    <insert id="insertUser" parameterType="u" useGeneratedKeys="true" keyProperty="id">
-        insert into user2(user_name,password,address) VALUES (#{userName},#{password},#{address})
-    </insert>
-
-    <insert id="insertUser2" parameterType="u" useGeneratedKeys="true" keyProperty="id">
-        <selectKey keyProperty="id" resultType="long" order="BEFORE">
-            SELECT if(max(id) is null ,1,max(id)+2) AS  newId FROM  user3
-        </selectKey>
-        insert into user3(id,user_name,password,address) VALUES (#{id},#{userName},#{password},#{address})
-    </insert>
-
-    <update id="updateUser" parameterType="userNewMap" >
-        update user2
-        set username=#{username},password=#{password},address=#{address}
-        WHERE  id=#{id}
-    </update>
-    <delete id="deleteUser" parameterType="Long">
-        delete from user2 where id=#{id}
-    </delete>
-
-    <select id="getAll" resultMap="userNewMap">
-        select * from user2;
-    </select>
-
     <select id="getCount" resultType="int">
         SELECT COUNT(*) FROM user2
     </select>
+    <select id="getUser" resultMap="userNewMap" parameterType="Long">
+        select * from user2 where id =#{id}
+    </select>
+
+   <select id="getUserByAddressAndName" resultMap="userNewMap">
+        select * FROM user2 where address=#{address} and user_name LIKE  concat(#{username},'%')
+    </select>
+    <select id="getUserByAddressAndName2" resultMap="userNewMap">
+        select * FROM user2 where address=#{address} and user_name LIKE  concat(#{username},'%')
+    </select>
+    <select id="getUserByAddressAndName3" resultMap="userNewMap"
+            parameterType="com.cycloneboy.mybatis.entity.UserParams">
+        select * FROM user2 where address=#{address} and user_name LIKE  concat(#{username},'%')
+    </select>
+   <insert id="insertUser" parameterType="u" useGeneratedKeys="true" keyProperty="id">
+        insert into user2(user_name,password,address) VALUES (#{userName},#{password},#{address})
+    </insert>
+<!--    <insert id="insertUser2" parameterType="u" useGeneratedKeys="true" keyProperty="id">
+        <selectKey keyProperty="id" resultType="long" order="BEFORE">
+              SELECT if(max(id) is null ,1,max(id)+2) AS  newId FROM  user3
+        </selectKey>
+        insert into user3(id,user_name,password,address) VALUES (#{id},#{userName},#{password},#{address})
+    </insert>
+-->
+       <update id="updateUser" parameterType="u" >
+           update user2
+           set user_name=#{userName},password=#{password},address=#{address}
+           WHERE  id=#{id}
+       </update>
+
+       <delete id="deleteUser" parameterType="Long">
+           delete from user2 where id=#{id}
+       </delete>
+
+       <select id="getAll" resultMap="userNewMap">
+           select * from user2;
+       </select>
+
+
 </mapper>
