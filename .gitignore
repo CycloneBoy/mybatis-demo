@@ -10,3 +10,4 @@ mybatis-one/build/
 mybatis-one/src/main/java/com/cycloneboy/config/
 mybatis-xml/.gradle/
 mybatis-xml/build/
+mybatis-mapper/build/

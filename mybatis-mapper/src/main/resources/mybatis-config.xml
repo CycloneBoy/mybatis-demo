@@ -22,6 +22,7 @@
         </environment>
     </environments>
     <mappers>
-       <mapper resource="userNewMapper.xml"/>
+       <mapper resource="UserNewMapper.xml" />
+        <mapper resource="StudentMapper.xml" />
     </mappers>
 </configuration>

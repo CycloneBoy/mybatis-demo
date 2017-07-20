@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cycloneboy.mybatis.mapper.StudentMapper">
+    <resultMap id="studentResultMap" type="com.cycloneboy.mybatis.entity.Student">
+        <id property="id" column="id" />
+        <result property="name" column="name" />
+        <result property="sex" column="sex" />
+        <result property="age" column="age" />
+        <association property="clazz" column="clazz_id" javaType="com.cycloneboy.mybatis.entity.Clazz"
+                     select="selectClazzWithId"/>
+    </resultMap>
+    <resultMap id="clazzResultMap" type="com.cycloneboy.mybatis.entity.Clazz">
+        <id property="id" column="id"/>
+        <result property="code" column="code"/>
+        <collection property="students" javaType="ArrayList" column="id"
+                    ofType="com.cycloneboy.mybatis.entity.Student"
+                    select="selectStudentWithId"/>
+    </resultMap>
+
+    <!-- 根据班级ID查询班级-->
+    <select id="selectClazzWithId" resultType="com.cycloneboy.mybatis.entity.Clazz">
+        SELECT  * FROM  t_clazz where id=#{id}
+    </select>
+    <select id="getCount" resultType="int">
+        SELECT COUNT(*) FROM t_student
+    </select>
+    <!-- 查询所有学生信息-->
+    <select id="selectStudent" resultMap="studentResultMap" >
+        select * from t_student
+    </select>
+
+    <!-- 根据班级ID查询学生-->
+    <select id="selectStudentWithId" resultType="com.cycloneboy.mybatis.entity.Student">
+        SELECT * FROM  t_student where clazz_id=#{id}
+    </select>
+    <!--查询所有班级的信息 -->
+    <select id="selectClazz" resultMap="clazzResultMap">
+        select * from t_clazz
+    </select>
+</mapper>
