@@ -30,5 +30,10 @@
         <mapper resource="PersonMapper.xml" />
         <mapper resource="ClazzMapper.xml"/>
         <mapper resource="StudentMapper.xml"/>
+
+        <mapper resource="ArticleMapper.xml"/>
+        <mapper resource="OrderMapper.xml"/>
+        <mapper resource="UserMapper.xml"/>
+
     </mappers>
 </configuration>

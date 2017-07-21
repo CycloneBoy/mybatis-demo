@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cycloneboy.mybatis.mapper.OrderMapper">
+   <resultMap id="orderResultMap" type="com.cycloneboy.mybatis.entity.Order">
+       <id property="id" column="oid"/>
+       <result property="code" column="code"/>
+       <result property="total" column="total"/>
+       <!-- 多对一关联映射:association-->
+       <association property="user" javaType="com.cycloneboy.mybatis.entity.User">
+           <id property="id" column="id"/>
+           <result property="username" column="username"/>
+           <result property="loginname" column="loginname"/>
+           <result property="password" column="password"/>
+           <result property="phone" column="phone"/>
+           <result property="address" column="address"/>
+       </association>
+       <!-- 多对多映射的关键：collection -->
+       <collection property="articles" javaType="ArrayList"
+                   column="oid" ofType="com.cycloneboy.mybatis.entity.Article"
+                   select="com.cycloneboy.mybatis.mapper.ArticleMapper.selectArticleByOrderId"
+                   fetchType="lazy">
+           <id property="id" column="id"/>
+           <result property="name" column="name"/>
+           <result property="price" column="price"/>
+           <result property="remark" column="remark"/>
+       </collection>
+   </resultMap>
+    <!-- 注意:如果查询出来的列同名，则需要使用别名 -->
+    <select id="selectOrderById" parameterType="int" resultMap="orderResultMap">
+        SELECT u.* ,o.id AS  oid ,code,total,user_id
+          from t_user u,t_order o
+          WHERE u.id = o.user_id
+            AND o.id = #{id}
+    </select>
+    <select id="selectOrderByUserId" parameterType="int" resultType="com.cycloneboy.mybatis.entity.Order">
+        select * from t_order WHERE  user_id =#{id}
+    </select>
+            
+</mapper>

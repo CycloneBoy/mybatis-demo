@@ -18,50 +18,287 @@
     <schema id="12" parent="1" name="ssm-leran"/>
     <schema id="13" parent="1" name="sys"/>
     <schema id="14" parent="1" name="test"/>
-    <table id="15" parent="2" name="user"/>
-    <table id="16" parent="2" name="user2"/>
-    <column id="17" parent="15" name="id">
+    <schema id="15" parent="1" name="helmet-json"/>
+    <table id="16" parent="2" name="t_article"/>
+    <table id="17" parent="2" name="t_card"/>
+    <table id="18" parent="2" name="t_clazz"/>
+    <table id="19" parent="2" name="t_item"/>
+    <table id="20" parent="2" name="t_order"/>
+    <table id="21" parent="2" name="t_person"/>
+    <table id="22" parent="2" name="t_student"/>
+    <table id="23" parent="2" name="t_user"/>
+    <table id="24" parent="2" name="user"/>
+    <table id="25" parent="2" name="user2"/>
+    <column id="26" parent="16" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="18" parent="15" name="username">
+    <column id="27" parent="16" name="name">
       <Position>2</Position>
       <DataType>varchar(32)|0</DataType>
     </column>
-    <column id="19" parent="15" name="password">
+    <column id="28" parent="16" name="price">
       <Position>3</Position>
-      <DataType>varchar(64)|0</DataType>
+      <DataType>double|0</DataType>
     </column>
-    <column id="20" parent="15" name="address">
+    <column id="29" parent="16" name="remark">
       <Position>4</Position>
-      <DataType>varchar(64)|0</DataType>
+      <DataType>varchar(100)|0</DataType>
     </column>
-    <key id="21" parent="15" name="PRIMARY">
+    <key id="30" parent="16" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="22" parent="16" name="id">
+    <column id="31" parent="17" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="23" parent="16" name="user_name">
+    <column id="32" parent="17" name="code">
       <Position>2</Position>
       <DataType>varchar(32)|0</DataType>
     </column>
-    <column id="24" parent="16" name="password">
+    <key id="33" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="34" parent="18" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="35" parent="18" name="code">
+      <Position>2</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <key id="36" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="37" parent="19" name="order_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="19" name="article_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="39" parent="19" name="amount">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="40" parent="19" name="article_id">
+      <ColNames>article_id</ColNames>
+    </index>
+    <key id="41" parent="19" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>order_id
+article_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="42" parent="19" name="t_item_ibfk_1">
+      <ColNames>order_id</ColNames>
+      <RefSchemaName>mybatis-demo</RefSchemaName>
+      <RefTableName>t_order</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="43" parent="19" name="t_item_ibfk_2">
+      <ColNames>article_id</ColNames>
+      <RefSchemaName>mybatis-demo</RefSchemaName>
+      <RefTableName>t_article</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="44" parent="20" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="45" parent="20" name="code">
+      <Position>2</Position>
+      <DataType>varchar(64)|0</DataType>
+    </column>
+    <column id="46" parent="20" name="total">
+      <Position>3</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="47" parent="20" name="user_id">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="48" parent="20" name="user_id">
+      <ColNames>user_id</ColNames>
+    </index>
+    <key id="49" parent="20" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="50" parent="20" name="t_order_ibfk_1">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>mybatis-demo</RefSchemaName>
+      <RefTableName>t_user</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="51" parent="21" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="52" parent="21" name="name">
+      <Position>2</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="53" parent="21" name="sex">
+      <Position>3</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="54" parent="21" name="age">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="55" parent="21" name="card_id">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="56" parent="21" name="card_id">
+      <ColNames>card_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="57" parent="21" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="58" parent="21" name="card_id">
+      <ColNames>card_id</ColNames>
+      <UnderlyingIndexName>card_id</UnderlyingIndexName>
+    </key>
+    <foreign-key id="59" parent="21" name="t_person_ibfk_1">
+      <ColNames>card_id</ColNames>
+      <RefSchemaName>mybatis-demo</RefSchemaName>
+      <RefTableName>t_card</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="60" parent="22" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="61" parent="22" name="name">
+      <Position>2</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="62" parent="22" name="sex">
+      <Position>3</Position>
+      <DataType>varchar(3)|0</DataType>
+    </column>
+    <column id="63" parent="22" name="age">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="64" parent="22" name="clazz_id">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="65" parent="22" name="clazz_id">
+      <ColNames>clazz_id</ColNames>
+    </index>
+    <key id="66" parent="22" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="67" parent="22" name="t_student_ibfk_1">
+      <ColNames>clazz_id</ColNames>
+      <RefSchemaName>mybatis-demo</RefSchemaName>
+      <RefTableName>t_clazz</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="68" parent="23" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="69" parent="23" name="username">
+      <Position>2</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="70" parent="23" name="loginname">
+      <Position>3</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="71" parent="23" name="password">
+      <Position>4</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="72" parent="23" name="phone">
+      <Position>5</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="73" parent="23" name="address">
+      <Position>6</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <key id="74" parent="23" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="75" parent="24" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="76" parent="24" name="username">
+      <Position>2</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="77" parent="24" name="password">
       <Position>3</Position>
       <DataType>varchar(64)|0</DataType>
     </column>
-    <column id="25" parent="16" name="address">
+    <column id="78" parent="24" name="address">
       <Position>4</Position>
       <DataType>varchar(64)|0</DataType>
     </column>
-    <key id="26" parent="16" name="PRIMARY">
+    <key id="79" parent="24" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="80" parent="25" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="81" parent="25" name="user_name">
+      <Position>2</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="82" parent="25" name="password">
+      <Position>3</Position>
+      <DataType>varchar(64)|0</DataType>
+    </column>
+    <column id="83" parent="25" name="address">
+      <Position>4</Position>
+      <DataType>varchar(64)|0</DataType>
+    </column>
+    <key id="84" parent="25" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
