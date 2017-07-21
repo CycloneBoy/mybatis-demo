@@ -3,6 +3,7 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../mybatis-one">
+      <excludeFolder url="file://$MODULE_DIR$/../../mybatis-one/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/../../mybatis-one/build" />
     </content>
     <orderEntry type="inheritedJdk" />
