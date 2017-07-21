@@ -23,6 +23,8 @@
       <module name="mybatis-mapper_test" target="1.8" />
       <module name="mybatis-one_main" target="1.8" />
       <module name="mybatis-one_test" target="1.8" />
+      <module name="mybatis-transaction_main" target="1.8" />
+      <module name="mybatis-transaction_test" target="1.8" />
       <module name="mybatis-xml_main" target="1.8" />
       <module name="mybatis-xml_test" target="1.8" />
     </bytecodeTargetLevel>
