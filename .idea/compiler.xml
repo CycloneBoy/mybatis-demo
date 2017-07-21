@@ -16,6 +16,8 @@
       <module name="mybatis-demo-mybatis-mapper_test" target="1.8" />
       <module name="mybatis-demo_main" target="1.8" />
       <module name="mybatis-demo_test" target="1.8" />
+      <module name="mybatis-dynamicSQL_main" target="1.8" />
+      <module name="mybatis-dynamicSQL_test" target="1.8" />
       <module name="mybatis-mapper" target="1.5" />
       <module name="mybatis-mapper_main" target="1.8" />
       <module name="mybatis-mapper_test" target="1.8" />

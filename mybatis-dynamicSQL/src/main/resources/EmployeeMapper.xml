@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cycloneboy.mybatis.mapper.EmployeeMapper">
+    <select id="selectEmployeeByIdLike" resultType="com.cycloneboy.mybatis.entity.Employee">
+        SELECT * from t_employee WHERE  state ='ACTIVE'
+        <!-- 可选条件 -->
+        <if test="id != null">
+            and id=#{id}
+        </if>
+        <!-- 两个 可选条件 -->
+        <if test="loginname != null and password != null">
+            and loginname=#{loginname} and password=#{password}
+        </if>
+    </select>
+
+    <select id="selectEmployeeChoose" parameterType="hashmap"
+            resultType="com.cycloneboy.mybatis.entity.Employee">
+        SELECT * FROM  t_employee WHERE state='ACTIVE'
+        <!-- 如果传入了id，就根据id查询，没有传入id就根据loginname和password查询，
+             否则查询sex等于男的数据 -->
+        <choose>
+            <when test="id != null">
+                and id=#{id}
+            </when>
+            <when test="loginname!= null and password != null">
+                and loginname =#{loginname} and password = #{password}
+            </when>
+            <otherwise>
+                and sex = '男'
+            </otherwise>
+        </choose>
+
+    </select>
+
+    <select id="selectEmployeeLike" resultType="com.cycloneboy.mybatis.entity.Employee">
+        SELECT * from t_employee
+        <where>
+            <if test="state != null">
+                state =#{state}
+            </if>
+            <!-- 可选条件 -->
+            <if test="id != null">
+                and id=#{id}
+            </if>
+            <!-- 两个 可选条件 -->
+            <if test="loginname != null and password != null">
+                and loginname=#{loginname} and password=#{password}
+            </if>
+        </where>
+    </select>
+
+    <select id="selectEmployeeWithId" parameterType="int" resultType="com.cycloneboy.mybatis.entity.Employee">
+        SELECT * from t_employee WHERE  id=#{id}
+    </select>
+
+    <!-- 动态更新员工信息-->
+    <update id="updateEmployeeIfNecessary" parameterType="com.cycloneboy.mybatis.entity.Employee">
+        UPDATE t_employee
+        <set>
+            <if test="loginname != null">loginname=#{loginname},</if>
+            <if test="password != null">password=#{password},</if>
+            <if test="name!= null">name=#{name},</if>
+            <if test="sex!= null">sex=#{sex},</if>
+            <if test="age!=null">age=#{age},</if>
+            <if test="phone!=null">phone=#{phone},</if>
+            <if test="sal!=null">sal=#{sal},</if>
+            <if test="state!=null">state=#{state},</if>
+        </set>
+        WHERE  id =#{id}
+    </update>
+
+    <select id="selectEmployeeIn" resultType="com.cycloneboy.mybatis.entity.Employee">
+        SELECT  * from t_employee WHERE id IN
+        <foreach collection="list" item="item" index="index" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </select>
+
+    <select id="selectEmployeeLikeName" resultType="com.cycloneboy.mybatis.entity.Employee">
+        <bind name="pattern" value="'%' + _parameter.getName() + '%' "/>
+        SELECT * from t_employee
+        where loginname LIKE #{pattern}
+    </select>
+</mapper>
