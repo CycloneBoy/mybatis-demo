@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis-annotations.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis-annotations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis-annotations_main.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis-annotations_main.iml" group="mybatis-annotations" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis-annotations_test.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis-annotations_test.iml" group="mybatis-annotations" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis-associate.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis-associate.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis-associate_main.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis-associate_main.iml" group="mybatis-associate" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis-associate_test.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis-associate_test.iml" group="mybatis-associate" />

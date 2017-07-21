@@ -10,6 +10,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="mybatis-annotations_main" target="1.8" />
+      <module name="mybatis-annotations_test" target="1.8" />
       <module name="mybatis-associate_main" target="1.8" />
       <module name="mybatis-associate_test" target="1.8" />
       <module name="mybatis-demo-mybatis-mapper_main" target="1.8" />
