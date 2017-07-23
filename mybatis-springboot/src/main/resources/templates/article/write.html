@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.w3.org/1999/xhtml"
+      layout:decorator="fragments/layout">
+<body >
+
+    <div layout:fragment="prompt">
+        当前位置：首页 &gt; <em>更新博客</em>
+    </div>
+
+    <div layout:fragment="content" >
+
+        <h1>欢迎来到博客详情</h1>
+        <div class="container">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <p th:text=" ${article.title}" />
+                    </h3>
+                </div>
+                <div class="panel-body">
+
+                    <span th:text="${article.content}"></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

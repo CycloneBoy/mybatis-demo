@@ -3,6 +3,7 @@
       xmlns:layout="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Blog </title>
     <!-- 新 Bootstrap 核心 CSS 文件 -->
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
@@ -18,7 +19,7 @@
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a th:href="@{/}">首页</a></li>
+                    <li><a th:href="@{/article/}">首页</a></li>
                     <li><a th:href="@{http://www.baidu.com}">百度</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -58,7 +59,7 @@
             </td>
             <td></td>
             <td valign="top">
-                <div layout:fragment="content"></div>
+                <div layout:fragment="content" class="container"></div>
             </td>
         </tr>
     </table>
