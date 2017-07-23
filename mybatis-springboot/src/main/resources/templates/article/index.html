@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.w3.org/1999/xhtml"
+      layout:decorator="fragments/layout">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title>Blog</title>
+</head>
+<body >
+
+    <div layout:fragment="prompt">
+        当前位置：首页 &gt; <em>博客首页</em>
+    </div>
+
+    <div layout:fragment="content">
+
+        <h1>欢迎来到博客首页</h1>
+
+        <table>
+            <tr>
+                <th>标题</th>
+                <th>内容</th>
+                <th>总结</th>
+                <th>专栏名称</th>
+                <th>日期</th>
+            </tr>
+            <tr th:each="article:${articles}" >
+                <td th:text="${article.title}">2017/7/16 10:37:00</td>
+                <td th:text="${article.content}">CycloneBoy</td>
+                <td th:text="${article.summary}">23.22</td>
+                <td th:text="${article.categoryId}">23.22</td>
+                <td th:text="${article.date}">23.22</td>
+                <td>
+                    <a href="detail.html" th:href="@{/}">查看</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+</body>
+</html>

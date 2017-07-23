@@ -18,9 +18,15 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis-one.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis-one.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis-one_main.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis-one_main.iml" group="mybatis-one" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis-one_test.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis-one_test.iml" group="mybatis-one" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis-springboot.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis-springboot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis-springboot_main.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis-springboot_main.iml" group="mybatis-springboot" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis-springboot_test.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis-springboot_test.iml" group="mybatis-springboot" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis-transaction.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis-transaction.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis-transaction_main.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis-transaction_main.iml" group="mybatis-transaction" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis-transaction_test.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis-transaction_test.iml" group="mybatis-transaction" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis-typeHandler.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis-typeHandler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis-typeHandler_main.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis-typeHandler_main.iml" group="mybatis-typeHandler" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis-typeHandler_test.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis-typeHandler_test.iml" group="mybatis-typeHandler" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis-xml.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis-xml.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis-xml_main.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis-xml_main.iml" group="mybatis-xml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis-xml_test.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis-xml_test.iml" group="mybatis-xml" />

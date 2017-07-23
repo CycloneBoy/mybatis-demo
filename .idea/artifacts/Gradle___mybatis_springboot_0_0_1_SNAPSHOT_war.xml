@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Gradle : mybatis-springboot-0.0.1-SNAPSHOT.war">
+    <output-path>$PROJECT_DIR$/mybatis-springboot/build/libs</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$/mybatis-springboot" />
+    </properties>
+    <root id="archive" name="mybatis-springboot-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="Gradle : mybatis-springboot-0.0.1-SNAPSHOT.war (exploded)" />
+    </root>
+  </artifact>
+</component>

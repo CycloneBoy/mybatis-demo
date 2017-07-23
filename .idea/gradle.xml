@@ -79,12 +79,37 @@
       <GradleProjectSettings>
         <option name="createEmptyContentRootDirectories" value="true" />
         <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/mybatis-springboot" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../JavaCommonUtils/gradle-4.0-bin/gradle-4.0" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/mybatis-springboot" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="createEmptyContentRootDirectories" value="true" />
+        <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/mybatis-transaction" />
         <option name="gradleHome" value="$PROJECT_DIR$/../../../JavaCommonUtils/gradle-4.0-bin/gradle-4.0" />
         <option name="gradleJvm" value="Jdk1.8" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/mybatis-transaction" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="createEmptyContentRootDirectories" value="true" />
+        <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/mybatis-typeHandler" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../JavaCommonUtils/gradle-4.0-bin/gradle-4.0" />
+        <option name="gradleJvm" value="Jdk1.8" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/mybatis-typeHandler" />
           </set>
         </option>
         <option name="useAutoImport" value="true" />
