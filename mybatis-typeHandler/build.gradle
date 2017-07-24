@@ -1,0 +1,18 @@
+group 'com.cycloneboy.mybatis'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.mybatis', name: 'mybatis', version: '3.4.2'
+    compile group: 'log4j', name: 'log4j', version: '1.2.17'
+    runtime group: 'mysql', name: 'mysql-connector-java', version: '5.1.40'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
