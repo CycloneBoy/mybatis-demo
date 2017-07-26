@@ -30,6 +30,13 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis-xml.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis-xml.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis-xml_main.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis-xml_main.iml" group="mybatis-xml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis-xml_test.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis-xml_test.iml" group="mybatis-xml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/springmvc-annotation_main.iml" filepath="$PROJECT_DIR$/.idea/modules/springmvc-annotation_main.iml" group="springmvc-annotation" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/springmvc-annotation_test.iml" filepath="$PROJECT_DIR$/.idea/modules/springmvc-annotation_test.iml" group="springmvc-annotation" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/springmvc-demo_main.iml" filepath="$PROJECT_DIR$/.idea/modules/springmvc-demo_main.iml" group="springmvc-demo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/springmvc-demo_test.iml" filepath="$PROJECT_DIR$/.idea/modules/springmvc-demo_test.iml" group="springmvc-demo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/springmvc-xml.iml" filepath="$PROJECT_DIR$/.idea/modules/springmvc-xml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/springmvc-xml_main.iml" filepath="$PROJECT_DIR$/.idea/modules/springmvc-xml_main.iml" group="springmvc-xml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/springmvc-xml_test.iml" filepath="$PROJECT_DIR$/.idea/modules/springmvc-xml_test.iml" group="springmvc-xml" />
     </modules>
   </component>
 </project>

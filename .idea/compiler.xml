@@ -33,6 +33,12 @@
       <module name="mybatis-typeHandler_test" target="1.8" />
       <module name="mybatis-xml_main" target="1.8" />
       <module name="mybatis-xml_test" target="1.8" />
+      <module name="springmvc-annotation_main" target="1.8" />
+      <module name="springmvc-annotation_test" target="1.8" />
+      <module name="springmvc-demo_main" target="1.8" />
+      <module name="springmvc-demo_test" target="1.8" />
+      <module name="springmvc-xml_main" target="1.8" />
+      <module name="springmvc-xml_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
