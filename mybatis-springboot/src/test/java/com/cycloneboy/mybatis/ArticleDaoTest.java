@@ -6,7 +6,6 @@ import com.cycloneboy.mybatis.entity.Category;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
-import javax.validation.constraints.Max;
 import java.util.List;
 
 /**

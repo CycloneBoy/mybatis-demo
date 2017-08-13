@@ -1,7 +1,5 @@
 package com.cycloneboy.mybatis.entity.many;
 
-import com.cycloneboy.mybatis.entity.many.User;
-
 import java.io.Serializable;
 import java.util.List;
 

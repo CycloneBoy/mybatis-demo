@@ -1,6 +1,5 @@
 package com.cycloneboy.mybatis.controller;
 
-import com.alibaba.druid.sql.dialect.mysql.ast.statement.MySqlLoadDataInFileStatement;
 import com.cycloneboy.mybatis.entity.Article;
 import com.cycloneboy.mybatis.entity.Category;
 import com.cycloneboy.mybatis.service.impl.BlogServiceImpl;

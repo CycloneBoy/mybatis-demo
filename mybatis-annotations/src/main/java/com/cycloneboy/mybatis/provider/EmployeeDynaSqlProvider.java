@@ -1,10 +1,9 @@
 package com.cycloneboy.mybatis.provider;
 
-import java.util.Map;
-
 import com.cycloneboy.mybatis.entity.Employee;
-import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.jdbc.SQL;
+
+import java.util.Map;
 
 /**
  * Created by CycloneBoy on 2017/7/22.

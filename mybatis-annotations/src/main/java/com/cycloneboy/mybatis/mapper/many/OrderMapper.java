@@ -4,8 +4,6 @@ import com.cycloneboy.mybatis.entity.many.Order;
 import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.mapping.FetchType;
 
-import java.util.List;
-
 /**
  * Created by CycloneBoy on 2017/7/21.
  */

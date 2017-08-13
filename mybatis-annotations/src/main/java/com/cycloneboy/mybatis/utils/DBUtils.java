@@ -1,7 +1,6 @@
 package com.cycloneboy.mybatis.utils;
 
 
-import com.cycloneboy.mybatis.mapper.UserMapper;
 import org.apache.ibatis.datasource.pooled.PooledDataSource;
 import org.apache.ibatis.mapping.Environment;
 import org.apache.ibatis.session.Configuration;

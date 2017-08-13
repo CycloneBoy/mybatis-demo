@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context id="testTables" targetRuntime="MyBatis3">
+    
+    	<!-- JavaBean 实现 序列化 接口
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin">
+		</plugin>-->
+		<!-- genenat entity时,生成toString
+        <plugin type="org.mybatis.generator.plugins.ToStringPlugin" /> -->
+        <!-- 自定义物理分页  可生成支持Mysql数据的limit  不支持Oracle
+        <plugin type="org.mybatis.generator.plugins.page.PaginationPlugin" /> -->
+        <!-- 自定义查询指定字段
+        <plugin type="org.mybatis.generator.plugins.field.FieldsPlugin" /> -->
+        <!-- 开启支持内存分页   可生成 支持内存分布的方法及参数  
+        <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
+        -->
+        <!-- generate entity时，生成hashcode和equals方法
+		<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />
+		 -->
+		<!-- 此处是将Example改名为Criteria 当然 想改成什么都行~    -->
+        <!--<plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">  -->
+	        <!--<property name="searchString" value="Example$" />-->
+	        <!--&lt;!&ndash; 替换后-->
+	        <!--<property name="replaceString" value="Criteria" />  -->
+	         <!--&ndash;&gt;-->
+	        <!--<property name="replaceString" value="Query" />-->
+        <!--</plugin>  -->
+		<!--&lt;!&ndash; 此处是将UserMapper.xml改名为UserDao.xml 当然 想改成什么都行~ &ndash;&gt;        -->
+        <!--<plugin type="org.mybatis.generator.plugins.rename.RenameSqlMapperPlugin">  -->
+	        <!--<property name="searchString" value="Mapper" />-->
+	        <!--<property name="replaceString" value="Dao" />-->
+        <!--</plugin>  -->
+         <!---->
+		<!--&lt;!&ndash; 此处是将UserMapper改名为UserDao 接口 当然 想改成什么都行~  &ndash;&gt;        -->
+        <!--<plugin type="org.mybatis.generator.plugins.rename.RenameJavaMapperPlugin">  -->
+	        <!--<property name="searchString" value="Mapper$" />-->
+	        <!--<property name="replaceString" value="Dao" />-->
+        <!--</plugin>  -->
+        <!---->
+    	<commentGenerator>
+            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+            <property name="suppressAllComments" value="true" />
+            <property name="suppressDate" value="true"/>
+        </commentGenerator>
+        
+        <!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+            connectionURL="jdbc:mysql://localhost:3306/mybatis-springmvc?useSSL=true"
+            userId="root"
+            password="123456">
+        </jdbcConnection>
+        <!-- <jdbcConnection driverClass="oracle.jdbc.OracleDriver"
+            connectionURL="jdbc:oracle:thin:@127.0.0.1:1521:yycg" 
+            userId="yycg"
+            password="yycg">
+        </jdbcConnection> -->
+
+        <!-- 默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer，为 true时把JDBC DECIMAL 和 
+            NUMERIC 类型解析为java.math.BigDecimal -->
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+
+
+        <!-- targetProject:生成PO类的位置 -->
+        <javaModelGenerator targetPackage="com.cycloneboy.springmvc.entity"
+            targetProject=".\src">
+            <!-- enableSubPackages:是否让schema作为包的后缀 -->
+            <property name="enableSubPackages" value="false" />
+            <!-- 从数据库返回的值被清理前后的空格 -->
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <!-- targetProject:mapper映射文件生成的位置 -->
+        <sqlMapGenerator targetPackage="com.cycloneboy.springmvc.dao"
+            targetProject=".\src">
+            <!-- enableSubPackages:是否让schema作为包的后缀 -->
+            <property name="enableSubPackages" value="false" />
+        </sqlMapGenerator>
+        <!-- targetPackage：mapper接口生成的位置 -->
+        <javaClientGenerator type="XMLMAPPER"
+            targetPackage="com.cycloneboy.springmvc.dao"
+            targetProject=".\src">
+            <!-- enableSubPackages:是否让schema作为包的后缀 -->
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+
+        <!-- 指定数据库表，要生成哪些表，就写哪些表，要和数据库中对应，不能写错！ -->
+        <table tableName="items">
+            <generatedKey column="id" sqlStatement="Mysql"/>
+        </table>
+        <table tableName="orders">
+            <generatedKey column="id" sqlStatement="Mysql"/>
+        </table>
+        <table tableName="orderdetail">
+            <generatedKey column="id" sqlStatement="Mysql"/>
+        </table>
+        <table tableName="user">
+            <generatedKey column="id" sqlStatement="Mysql"/>
+        </table>
+    </context>
+</generatorConfiguration>

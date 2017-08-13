@@ -2,12 +2,9 @@ package com.cycloneboy.mybatis.dao;
 
 import com.cycloneboy.mybatis.common.BaseDao;
 import com.cycloneboy.mybatis.entity.Category;
-import org.apache.ibatis.annotations.Many;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.mapping.FetchType;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 

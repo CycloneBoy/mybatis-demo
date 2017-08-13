@@ -1,7 +1,5 @@
 package com.cycloneboy.mybatis.entity;
 
-import java.util.List;
-
 /**
  * Created by CycloneBoy on 2017/7/22.
  */

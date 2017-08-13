@@ -1,7 +1,5 @@
 import com.cycloneboy.mybatis.entity.Person;
-import com.cycloneboy.mybatis.entity.User;
 import com.cycloneboy.mybatis.mapper.PersonMapper;
-import com.cycloneboy.mybatis.mapper.UserMapper;
 import com.cycloneboy.mybatis.utils.DBUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;

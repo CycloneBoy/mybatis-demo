@@ -4,7 +4,6 @@ import com.cycloneboy.mybatis.entity.Employee;
 import com.cycloneboy.mybatis.provider.EmployeeDynaSqlProvider;
 import org.apache.ibatis.annotations.*;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 

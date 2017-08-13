@@ -1,3 +1,4 @@
 rootProject.name = 'mybatis-demo'
-
+include 'springmvc-mybatis'
+include 'springmvc-java'
 
